@@ -1,0 +1,91 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* Body */
+ body{
+    font-family: 'Poiret One', cursive;
+    font-variant-caps: small-caps;
+    
+} 
+
+/* Navigation */
+nav.navbar.navbar-expand-lg{
+    background-color: white;
+   
+}
+a.nav-link{
+    color: #e27a81;
+    font-weight: bolder;
+    outline: white;
+    outline-width: medium;
+}
+a.navbar-brand{
+    color: #e27a81;
+    font-weight: bolder;
+    outline-color: white;
+    outline-width: medium;
+}
+
+/* Home Page */
+body.homePage{
+    background-color: black;
+    
+}
+video.homePage{
+   height: 100%;
+   width: 100%;
+   position: relative; 
+   top: 0;
+   left: 0;
+   bottom: 0; 
+   right: 0;
+   /* z-index: 1000;  */
+}
+/* About Page */
+
+body.aboutPage{
+    /* background-color: #bf884e; */
+    background-color: #ac187a;
+}
+h1.aboutPage{
+    text-align: center;
+    color: white;
+}
+img.aboutImage{
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #382632;
+    height: 450px;
+    border-radius: 70px;
+    
+
+}
+p.aboutPage{
+    color: white;
+    font-size: 25px;
+
+}
+div.aboutText{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+/* Footer */
+footer.page-footer{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: right;
+    color: #e27a81;
+    font-size: medium;
+}
+/* div.right{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: right;
+} */
