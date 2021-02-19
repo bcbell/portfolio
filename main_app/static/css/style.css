@@ -1,10 +1,11 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 /* Body */
  body{
     font-family: 'Poiret One', cursive;
-    font-variant-caps: small-caps;
+    /* font-variant-caps: small-caps; */
     
 } 
 
@@ -18,14 +19,35 @@ a.nav-link{
     font-weight: bolder;
     outline: white;
     outline-width: medium;
+    font-variant-caps: small-caps;
+}
+a.nav-link:hover{
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    font-variant-caps: small-caps;
+    
 }
 a.navbar-brand{
     color: #e27a81;
     font-weight: bolder;
     outline-color: white;
     outline-width: medium;
+    font-variant-caps: small-caps;
 }
-
+a.dropdown-item{
+    color: #e27a81;
+    font-weight: bolder;
+    outline: white;
+    outline-width: medium;
+    font-variant-caps: small-caps;
+}
+a.dropdown-item:hover{
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    font-variant-caps: small-caps;
+}
 /* Home Page */
 body.homePage{
     background-color: black;
@@ -39,37 +61,56 @@ video.homePage{
    left: 0;
    bottom: 0; 
    right: 0;
-   /* z-index: 1000;  */
 }
 /* About Page */
 
 body.aboutPage{
-    /* background-color: #bf884e; */
     background-color: #ac187a;
 }
 h1.aboutPage{
     text-align: center;
     color: white;
+    font-variant-caps: small-caps;
 }
 img.aboutImage{
     display: block;
-    width: 40%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     border: 3px solid #382632;
-    height: 450px;
-    border-radius: 70px;
-    
+    height: 500px;
+    border-radius: 70px;  
 }
 p.aboutPage{
     color: white;
     font-size: 25px;
-
 }
 div.aboutText{
     display: flex;
     justify-content: center;
     align-content: center;
+}
+a.aboutPage{
+    color: #e27a81; 
+    font-weight: bolder;
+}
+h2.aboutPage{
+    text-align: center;
+    color: white;
+    font-variant-caps: small-caps;
+}
+button.aboutPage{
+    font-size: 20px ;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #e27a81;  
+
+}
+button:hover{
+    background-color: #ac187a;
+    color: white;  
 }
 
 /* Blog Page */
@@ -81,11 +122,16 @@ button.blogPage{
     background-color: #e27a81;
     color: white;
 }
+button.blogPage:hover{
+    background-color: #ac187a;
+    color: white;  
+}
 h1.blogPage{
     font-size: 40px;
     font-weight: bolder;
     border-bottom: 3px solid black;
     text-align: center;
+    font-variant-caps: small-caps;
 }
 a.blogPage{
     color: white;
@@ -110,8 +156,56 @@ button.blogDelete{
     outline: none;
     border: none;
     background-color: #e27a81;
+    color: white;  
+}
+/* Project Page */
+body.projectPage{
+    background-color: #ac187a;
+}
+h1.projectPage{
+    text-align: center;
     color: white;
-    
+    font-variant-caps: small-caps;
+    border-bottom: 3px solid white;
+}
+div.wom-nology{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+img.projectPage{
+    width: 40%;
+    height: 40%;
+    border: black 3px solid;
+}
+h3.wom-nology{
+    color: white;
+}
+
+/* Experience Page */
+body.experiencePage{
+    background-color: #ac187a;
+}
+h1.experiencePage{
+    text-align: center;
+    color: white;
+    font-variant-caps: small-caps;
+    border-bottom: 3px solid white;
+}
+/* Certification Page */
+
+/* Connect Page */
+body.connectPage{
+    background-color: #ac187a;
+}
+h1.connectPage{
+    text-align: center;
+    color: white;
+    font-variant-caps: small-caps;
+    border-bottom: 3px solid white;
+}
+svg.bi.bi-linkedin{
+    color: blue;
 }
 /* Footer */
 footer.page-footer{

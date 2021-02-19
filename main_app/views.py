@@ -20,6 +20,18 @@ def removeBlog(request, blog_id):
     blog.delete()
     return redirect('/blog')
 
+def projects(request):
+    return render(request, 'portfolio/project_page.html')
+
+def experience(request):
+    return render(request, 'portfolio/experience_page.html')
+
+def certifications(request):
+    return render(request, 'portfolio/certifications_page.html')
+
+def connect(request):
+    return render(request, 'connect/connect_page.html' )
+    
 class BlogCreate(CreateView):
     model=Blog
     fields='__all__'
@@ -30,7 +42,3 @@ class BlogUpdate(UpdateView):
     fields='__all__'
     template_name='main_app/blog_form.html'
     success_url='/blog'
-
-# class BlogDelete(DeleteView):
-#     model=Blog
-#     success_url='/blog'

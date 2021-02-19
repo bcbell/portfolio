@@ -39,13 +39,13 @@
             Portfolio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Projects</a></li>
-            <li><a class="dropdown-item" href="#">Experience</a></li>
-            <li><a class="dropdown-item" href="#">Certifications</a></li>
+            <li><a class="dropdown-item" href="{% url 'projects' %}">Projects</a></li>
+            <li><a class="dropdown-item" href="{% url 'experience' %}">Experience</a></li>
+            <li><a class="dropdown-item" href="{%url 'certifications'%}">Certifications</a></li>
           </ul>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Connect</a>
+          <a class="nav-link" href="{% url 'connect' %}">Connect</a>
         </li>
       </ul>
     </div>
