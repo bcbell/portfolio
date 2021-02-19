@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>Are you sure you want to delete <span class='blogPage'> "{{ object.title }}"</span> </h1>
+
+<form action="{% url 'blog_delete' %}" method="post">
+{% csrf_token %}
+<table>
+{{form.as_table}}
+</table>
+<br/>
+<button  class='blogDelete' type="submit">Submit</button>
+</form>
+{% endblock%}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="blogPage"><strong>Blog </strong><a href='{% url 'blog_create' %}'><button class='blogPage'>Create a Blog</button></a></h1>
+
+{% if blogs %}
+{% for blog in blogs %}
+<div class='blogPage'>
+    <h3 class='blogPage'>{{blog.title}} 
+    {%if user%}
+        <button class='blogPage'><a class='blogPage' href='{% url 'blog_update' blog.id%}'> Edit</a></button> <button class='blogPage'><a class='blogPage' href='{% url 'blog_delete' blog.id %}'>Delete</a></button>
+        {% endif%}
+        
+    </h3>
+<h6 class='blogPage'>Category: {{blog.topic_category}}</h6>
+<h6 class='blogPage'> {{blog.created_at}}-By:<strong> {{blog.author_firstname}} {{blog.author_lastname}}</strong></h6>
+<p class='blogPage'>{{blog.post}}</p>
+</div>
+<br/>
+ {% endfor %}
+ {% else %}
+
+ <h4> No blogs currently available...</h4>
+ {% endif %}
+{% endblock%}
+

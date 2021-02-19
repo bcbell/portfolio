@@ -81,6 +81,15 @@ button.blogPage{
     background-color: #e27a81;
     color: white;
 }
+h1.blogPage{
+    font-size: 40px;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+a.blogPage{
+    color: white;
+}
 /*  Blog Create Page */
 button.blogCreate{
     font-size: medium ;
@@ -89,6 +98,20 @@ button.blogCreate{
     border: none;
     background-color: #e27a81;
     color: white;
+}
+p.blogPage{
+    font-size: 25px;
+}
+
+/* Blog Delete */
+button.blogDelete{
+    font-size: medium ;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #e27a81;
+    color: white;
+    
 }
 /* Footer */
 footer.page-footer{
