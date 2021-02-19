@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>blog</home>
+<h1><strong>Blog </strong><a href='{% url 'blog_create' %}'><button class='blogPage'>Create a Blog</button></a></h1>
 
+{% if object %}
+{% for blog in object %}
+<h3>{{blog.title}}</h3>
+<h4>{{blog.topic_category}}</h4>
+<h6>By: {{blog.author_firstname}} {{blog.author_lastname}} | at : <i> {{blog.created_at}}</i></h6>
+ {% endfor %}
+ {% else %}
+
+ <h4> No blogs currently available...</h4>
+ {% endif %}
 {% endblock%}

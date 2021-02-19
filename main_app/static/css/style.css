@@ -60,7 +60,6 @@ img.aboutImage{
     height: 450px;
     border-radius: 70px;
     
-
 }
 p.aboutPage{
     color: white;
@@ -71,6 +70,25 @@ div.aboutText{
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+/* Blog Page */
+button.blogPage{
+    font-size: medium ;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #e27a81;
+    color: white;
+}
+/*  Blog Create Page */
+button.blogCreate{
+    font-size: medium ;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #e27a81;
+    color: white;
 }
 /* Footer */
 footer.page-footer{

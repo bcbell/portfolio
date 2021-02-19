@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if object %}
+<h1>Edit <span class='blogPage'> {{ object.name }}</span> </h1>
+{% else%}
+<h1>Add a Blog</h1>
+{% endif%}
+<form action="{% url 'blog' %}" method="post">
+{% csrf_token %}
+<table>
+{{form.as_table}}
+</table>
+<buttom  class='blogCreate' type="submit">Submit</button>
+</form>
+{% endblock%}
