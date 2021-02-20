@@ -3,7 +3,22 @@ from .models import Blog
 from .forms import BlogForm
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 
+def signup(request):
+  error_message = ''
+  if request.method == 'POST':
+    form = UserCreationForm(request.POST)
+    if form.is_valid():
+      user = form.save()
+      login(request, user)
+      return redirect('about')
+    else:
+      error_message = 'Invalid sign up - try again'
+  form = UserCreationForm()
+  context = {'form': form, 'error_message': error_message}
+  return render(request, 'registration/signup.html', context)
 
 def home(request):
     return render(request, 'home_page.html')
@@ -21,16 +36,16 @@ def removeBlog(request, blog_id):
     return redirect('/blog')
 
 def projects(request):
-    return render(request, 'portfolio/project_page.html')
+    return render(request, 'project_page.html')
 
 def experience(request):
-    return render(request, 'portfolio/experience_page.html')
+    return render(request, 'experience_page.html')
 
 def certifications(request):
-    return render(request, 'portfolio/certifications_page.html')
+    return render(request, 'certifications_page.html')
 
 def connect(request):
-    return render(request, 'connect/connect_page.html' )
+    return render(request, 'connect_page.html' )
     
 class BlogCreate(CreateView):
     model=Blog

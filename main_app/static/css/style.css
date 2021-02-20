@@ -5,18 +5,38 @@
 /* Body */
  body{
     font-family: 'Poiret One', cursive;
-    /* font-variant-caps: small-caps; */
     
 } 
+/* Sign-Up */
+body.signup{
+    background-color: black ;
+    color: white;
+}
+button.signup{
+    font-size: 20px ;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #e27a81;  
+}
+/* Login */
+
+button.login{
+    font-size: 20px ;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #e27a81;  
+}
 
 /* Navigation */
 nav.navbar.navbar-expand-lg{
     background-color: white;
    
 }
-/* img.navbar{
-    border-radius: 50px;
-} */
+
 a.nav-link{
     color: #e27a81;
     font-weight: bolder;
@@ -200,7 +220,7 @@ div.crafter{
 }
 img.projectPage{
     width: 70%;
-    height: 90%;
+    height: 80%;
     border: black 3px solid;
 }
 h3.projectPage{
@@ -217,8 +237,63 @@ h1.experiencePage{
     font-variant-caps: small-caps;
     border-bottom: 3px solid white;
 }
+.skills-section {
+    padding: 3rem 0;
+    color: #e6e6e6;
+  }
+  
+  .skills-div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skills-section h2 {
+    color: #e6e6e6;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+  
+  .skills-section .container h3 {
+    margin: 2rem 0;
+    margin-left: 1rem;
+  }
+  
+  .skills-card {
+    background: #1a1a1a;
+    color: #e6e6e6;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem;
+  }
+  
+  .skills-card img {
+    height: 13rem;
+    width: 13rem;
+    margin-bottom: 1rem;
+  }
+  
 /* Certification Page */
-
+body.certificationsPage{
+    background-color: #ac187a;
+}
+h1.certificationsPage{
+    text-align: center;
+    color: white;
+    font-variant-caps: small-caps;
+    border-bottom: 3px solid white;
+}
+li.certificationsPage{
+    color: white;
+    font-size: 35px;
+}
 /* Connect Page */
 body.connectPage{
     background-color: #ac187a;
@@ -229,9 +304,39 @@ h1.connectPage{
     font-variant-caps: small-caps;
     border-bottom: 3px solid white;
 }
-svg.bi.bi-linkedin{
-    color: blue;
+div.direct-contact-container{
+    position: absolute;
+    top: 30%;   
+    width: 90%;
+    text-align: center;
 }
+button.connectPage{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+button:hover svg{
+    transform: scale(1.3);
+    color: #e27a81;
+}
+button::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+button:hover::before{
+    top:-10%;
+    left: -10%;
+}
+
 /* Footer */
 footer.page-footer{
     left: 0;
@@ -242,10 +347,3 @@ footer.page-footer{
     color: #e27a81;
     font-size: medium;
 }
-/* div.right{
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    text-align: right;
-} */
