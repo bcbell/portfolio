@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
 from .models import Blog
 from .forms import BlogForm
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
 def signup(request):
@@ -48,7 +47,7 @@ def certifications(request):
 def connect(request):
     return render(request, 'connect_page.html' )
 
-@login_required    
+  
 class BlogCreate(CreateView):
     model=Blog
     fields='__all__'
