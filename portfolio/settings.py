@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
+import django_on_heroku
 import environ
 environ.Env()
 environ.Env.read_env()
@@ -137,4 +137,4 @@ LOGIN_REDIRECT_URL='/about'
 
 LOGOUT_REDIRECT_URL='/'
 
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
