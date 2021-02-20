@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Blog
 from .forms import BlogForm
 from django.views.generic import ListView, DetailView
@@ -46,7 +47,8 @@ def certifications(request):
 
 def connect(request):
     return render(request, 'connect_page.html' )
-    
+
+@login_required    
 class BlogCreate(CreateView):
     model=Blog
     fields='__all__'
