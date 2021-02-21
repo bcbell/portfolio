@@ -194,6 +194,9 @@ div.projectPage2{
 div.projectPage3{
     display: flex;
 }
+div.projectPage4{
+    display: flex;
+}
 h1.projectPage{
     text-align: center;
     color: white;
