@@ -293,10 +293,21 @@ h1.certificationsPage{
     font-variant-caps: small-caps;
     border-bottom: 3px solid white;
 }
+h2.certificationsPage{
+    text-align: left;
+    color: white;
+    font-variant-caps: small-caps;
+}
+ul.certificationsPage{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 li.certificationsPage{
     color: white;
-    font-size: 35px;
+    font-size: 35px
 }
+
 /* Connect Page */
 body.connectPage{
     background-color: #ac187a;
